@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <!-- Estilos -->
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #2c3e50; stroke-width: 2; }
+      .storage { fill: #e8f5e9; stroke: #27ae60; stroke-width: 2; }
+      .process { fill: #e3f2fd; stroke: #2196f3; stroke-width: 2; }
+      .model { fill: #fff3e0; stroke: #ff9800; stroke-width: 2; }
+      .user { fill: #f3e5f5; stroke: #9c27b0; stroke-width: 2; }
+      .arrow { fill: none; stroke: #34495e; stroke-width: 2; marker-end: url(#arrowhead); }
+      .data-arrow { fill: none; stroke: #e74c3c; stroke-width: 2; marker-end: url(#arrowhead-red); stroke-dasharray: 5,5; }
+      .title-text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+      .desc-text { font-family: Arial, sans-serif; font-size: 12px; text-anchor: middle; fill: #555; }
+      .phase-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+  </defs>
+
+  <!-- Título principal -->
+  <text x="600" y="30" class="title-text" font-size="20" fill="#2c3e50">
+    Pipeline del Chatbot RAG Institucional - TecNM Campus Querétaro
+  </text>
+
+  <!-- FASE 1: PREPARACIÓN DE DATOS -->
+  <text x="100" y="80" class="phase-text">FASE 1: Preparación de Datos</text>
+  
+  <!-- Documentos institucionales -->
+  <rect x="50" y="100" width="200" height="80" class="storage" rx="5"/>
+  <text x="150" y="130" class="title-text">Documentos</text>
+  <text x="150" y="145" class="title-text">Institucionales</text>
+  <text x="150" y="165" class="desc-text">• Reglamentos</text>
+  <text x="150" y="178" class="desc-text">• FAQs • Manuales</text>
+
+  <!-- Procesamiento -->
+  <rect x="300" y="100" width="180" height="80" class="process" rx="5"/>
+  <text x="390" y="130" class="title-text">Procesamiento</text>
+  <text x="390" y="145" class="title-text">de Documentos</text>
+  <text x="390" y="165" class="desc-text">• Parseo (PDF, etc.)</text>
+  <text x="390" y="178" class="desc-text">• Segmentación</text>
+
+  <!-- Vectorización -->
+  <rect x="530" y="100" width="180" height="80" class="process" rx="5"/>
+  <text x="620" y="130" class="title-text">Vectorización</text>
+  <text x="620" y="145" class="title-text">(Embeddings)</text>
+  <text x="620" y="165" class="desc-text">• Modelo de embeddings</text>
+  <text x="620" y="178" class="desc-text">• Conversión a vectores</text>
+
+  <!-- Arrows FASE 1 -->
+  <path d="M 250 140 L 290 140" class="arrow"/>
+  <path d="M 480 140 L 520 140" class="arrow"/>
+
+  <!-- FASE 2: INDEXACIÓN Y ALMACENAMIENTO -->
+  <text x="100" y="220" class="phase-text">FASE 2: Indexación y Almacenamiento</text>
+
+  <!-- Base de Datos Vectorial -->
+  <rect x="150" y="240" width="200" height="100" class="storage" rx="5"/>
+  <text x="250" y="270" class="title-text">Base de Datos</text>
+  <text x="250" y="285" class="title-text">Vectorial</text>
+  <text x="250" y="305" class="desc-text">• FAISS / ChromaDB</text>
+  <text x="250" y="320" class="desc-text">• Qdrant</text>
+  <text x="250" y="335" class="desc-text">• Búsqueda semántica</text>
+
+  <!-- Índice BM25 (opcional) -->
+  <rect x="400" y="240" width="200" height="100" class="storage" rx="5"/>
+  <text x="500" y="270" class="title-text">Índice BM25</text>
+  <text x="500" y="285" class="title-text">(Opcional)</text>
+  <text x="500" y="305" class="desc-text">• Búsqueda léxica</text>
+  <text x="500" y="320" class="desc-text">• Palabras clave</text>
+  <text x="500" y="335" class="desc-text">• Búsqueda híbrida</text>
+
+  <!-- Arrows de vectorización a storage -->
+  <path d="M 620 180 L 620 220 L 350 220 L 350 240" class="data-arrow"/>
+  <path d="M 620 220 L 500 220 L 500 240" class="data-arrow"/>
+
+  <!-- FASE 3: INTERACCIÓN DEL USUARIO -->
+  <text x="800" y="80" class="phase-text">FASE 3: Interacción</text>
+
+  <!-- Usuario -->
+  <rect x="750" y="100" width="180" height="80" class="user" rx="5"/>
+  <text x="840" y="130" class="title-text">Usuario</text>
+  <text x="840" y="145" class="title-text">(Estudiante/Personal)</text>
+  <text x="840" y="165" class="desc-text">Pregunta en</text>
+  <text x="840" y="178" class="desc-text">lenguaje natural</text>
+
+  <!-- Interfaz Web -->
+  <rect x="750" y="220" width="180" height="80" class="user" rx="5"/>
+  <text x="840" y="250" class="title-text">Interfaz Web</text>
+  <text x="840" y="270" class="desc-text">• Frontend</text>
+  <text x="840" y="285" class="desc-text">• Chat UI</text>
+
+  <!-- API Backend -->
+  <rect x="750" y="340" width="180" height="80" class="process" rx="5"/>
+  <text x="840" y="370" class="title-text">API Backend</text>
+  <text x="840" y="390" class="desc-text">• REST API</text>
+  <text x="840" y="405" class="desc-text">• Orquestación RAG</text>
+
+  <!-- Arrows usuario a sistema -->
+  <path d="M 840 180 L 840 220" class="arrow"/>
+  <path d="M 840 300 L 840 340" class="arrow"/>
+
+  <!-- FASE 4: RECUPERACIÓN (RAG) -->
+  <text x="100" y="400" class="phase-text">FASE 4: Recuperación (Retrieval)</text>
+
+  <!-- Procesamiento de Query -->
+  <rect x="50" y="420" width="200" height="100" class="process" rx="5"/>
+  <text x="150" y="450" class="title-text">Procesamiento</text>
+  <text x="150" y="465" class="title-text">de Consulta</text>
+  <text x="150" y="485" class="desc-text">• Vectorización query</text>
+  <text x="150" y="500" class="desc-text">• Análisis de intención</text>
+  <text x="150" y="515" class="desc-text">• Preprocesamiento</text>
+
+  <!-- Sistema de Recuperación -->
+  <rect x="300" y="420" width="200" height="100" class="process" rx="5"/>
+  <text x="400" y="450" class="title-text">Sistema de</text>
+  <text x="400" y="465" class="title-text">Recuperación</text>
+  <text x="400" y="485" class="desc-text">• Búsqueda vectorial</text>
+  <text x="400" y="500" class="desc-text">• Top-K documentos</text>
+  <text x="400" y="515" class="desc-text">• Ranking relevancia</text>
+
+  <!-- Documentos Recuperados -->
+  <rect x="550" y="420" width="200" height="100" class="storage" rx="5"/>
+  <text x="650" y="450" class="title-text">Documentos</text>
+  <text x="650" y="465" class="title-text">Recuperados</text>
+  <text x="650" y="485" class="desc-text">• Fragmentos relevantes</text>
+  <text x="650" y="500" class="desc-text">• Contexto</text>
+  <text x="650" y="515" class="desc-text">• Fuentes oficiales</text>
+
+  <!-- Arrows recuperación -->
+  <path d="M 840 420 L 840 470 L 260 470 L 260 420" class="arrow"/>
+  <path d="M 250 470 L 290 470" class="arrow"/>
+  <path d="M 500 470 L 540 470" class="arrow"/>
+  
+  <!-- Conexión a bases de datos -->
+  <path d="M 300 290 L 280 290 L 280 450 L 300 450" class="data-arrow"/>
+  <path d="M 500 340 L 520 340 L 520 440 L 500 440" class="data-arrow"/>
+
+  <!-- FASE 5: GENERACIÓN -->
+  <text x="100" y="570" class="phase-text">FASE 5: Generación de Respuesta</text>
+
+  <!-- Prompt Engineering -->
+  <rect x="50" y="590" width="200" height="100" class="process" rx="5"/>
+  <text x="150" y="620" class="title-text">Construcción</text>
+  <text x="150" y="635" class="title-text">de Prompt</text>
+  <text x="150" y="655" class="desc-text">• Query original</text>
+  <text x="150" y="670" class="desc-text">• Contexto recuperado</text>
+  <text x="150" y="685" class="desc-text">• Instrucciones</text>
+
+  <!-- LLM -->
+  <rect x="300" y="590" width="200" height="100" class="model" rx="5"/>
+  <text x="400" y="620" class="title-text">Modelo de Lenguaje</text>
+  <text x="400" y="635" class="title-text">(LLM)</text>
+  <text x="400" y="655" class="desc-text">• GPT / Claude / LLaMA</text>
+  <text x="400" y="670" class="desc-text">• Generación fundamentada</text>
+  <text x="400" y="685" class="desc-text">• Control de alucinaciones</text>
+
+  <!-- Respuesta Generada -->
+  <rect x="550" y="590" width="200" height="100" class="process" rx="5"/>
+  <text x="650" y="620" class="title-text">Post-procesamiento</text>
+  <text x="650" y="635" class="title-text">y Validación</text>
+  <text x="650" y="655" class="desc-text">• Formateo respuesta</text>
+  <text x="650" y="670" class="desc-text">• Citación de fuentes</text>
+  <text x="650" y="685" class="desc-text">• Verificación calidad</text>
+
+  <!-- Arrows generación -->
+  <path d="M 650 520 L 650 560 L 150 560 L 150 590" class="data-arrow"/>
+  <path d="M 250 640 L 290 640" class="arrow"/>
+  <path d="M 500 640 L 540 640" class="arrow"/>
+
+  <!-- FASE 6: RESPUESTA AL USUARIO -->
+  <text x="100" y="740" class="phase-text">FASE 6: Presentación</text>
+
+  <!-- Respuesta Final -->
+  <rect x="200" y="760" width="200" height="80" class="user" rx="5"/>
+  <text x="300" y="790" class="title-text">Respuesta al Usuario</text>
+  <text x="300" y="810" class="desc-text">• Lenguaje natural</text>
+  <text x="300" y="825" class="desc-text">• Fuentes citadas</text>
+
+  <!-- Interfaz actualizada -->
+  <rect x="450" y="760" width="200" height="80" class="user" rx="5"/>
+  <text x="550" y="790" class="title-text">Visualización Web</text>
+  <text x="550" y="810" class="desc-text">• Actualización UI</text>
+  <text x="550" y="825" class="desc-text">• Historial de chat</text>
+
+  <!-- Arrows a respuesta final -->
+  <path d="M 650 690 L 650 730 L 300 730 L 300 760" class="arrow"/>
+  <path d="M 550 730 L 550 760" class="arrow"/>
+  <path d="M 550 760 L 840 760 L 840 420" class="data-arrow"/>
+
+  <!-- COMPONENTES TRANSVERSALES -->
+  <text x="850" y="570" class="phase-text">Componentes Transversales</text>
+
+  <!-- Seguridad -->
+  <rect x="850" y="590" width="150" height="60" class="box" rx="5"/>
+  <text x="925" y="615" class="title-text" font-size="14">Seguridad</text>
+  <text x="925" y="635" class="desc-text" font-size="11">• Control de acceso</text>
+  <text x="925" y="648" class="desc-text" font-size="11">• Protección datos</text>
+
+  <!-- Monitoreo -->
+  <rect x="1020" y="590" width="150" height="60" class="box" rx="5"/>
+  <text x="1095" y="615" class="title-text" font-size="14">Monitoreo</text>
+  <text x="1095" y="635" class="desc-text" font-size="11">• Logs de queries</text>
+  <text x="1095" y="648" class="desc-text" font-size="11">• Métricas (RAGAS)</text>
+
+  <!-- Evaluación -->
+  <rect x="850" y="670" width="150" height="60" class="box" rx="5"/>
+  <text x="925" y="695" class="title-text" font-size="14">Evaluación</text>
+  <text x="925" y="715" class="desc-text" font-size="11">• Precision/Recall</text>
+  <text x="925" y="728" class="desc-text" font-size="11">• Usabilidad (SUS)</text>
+
+  <!-- Mejora Continua -->
+  <rect x="1020" y="670" width="150" height="60" class="box" rx="5"/>
+  <text x="1095" y="695" class="title-text" font-size="14">Mejora Continua</text>
+  <text x="1095" y="715" class="desc-text" font-size="11">• Feedback usuarios</text>
+  <text x="1095" y="728" class="desc-text" font-size="11">• Actualización docs</text>
+
+  <!-- Leyenda -->
+  <text x="100" y="870" class="phase-text">Leyenda:</text>
+  <rect x="200" y="855" width="60" height="25" class="storage" rx="3"/>
+  <text x="270" y="872" class="desc-text">Almacenamiento</text>
+  
+  <rect x="380" y="855" width="60" height="25" class="process" rx="3"/>
+  <text x="450" y="872" class="desc-text">Procesamiento</text>
+  
+  <rect x="560" y="855" width="60" height="25" class="model" rx="3"/>
+  <text x="630" y="872" class="desc-text">Modelo IA</text>
+  
+  <rect x="710" y="855" width="60" height="25" class="user" rx="3"/>
+  <text x="780" y="872" class="desc-text">Interfaz Usuario</text>
+
+  <path d="M 850 862 L 900 862" class="arrow"/>
+  <text x="910" y="872" class="desc-text">Flujo principal</text>
+
+  <path d="M 980 862 L 1030 862" class="data-arrow"/>
+  <text x="1040" y="872" class="desc-text">Flujo de datos</text>
+
+</svg>
